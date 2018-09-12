@@ -1,0 +1,293 @@
+html {
+	background-color: #E4E4E4;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 14px;
+	background-image: url("gsbg.png");
+}
+
+header {
+	background-color: #041E42;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+}
+
+a {
+	cursor: pointer;
+}
+
+li.nav-item {
+	cursor: pointer;
+	color:#AAAAAA;
+	padding-right: 10px;
+}
+
+a.linkright {
+	float:right;
+	vertical-align: middle;
+	padding-top:5px;
+	padding-right:10px;
+}
+
+a.logLink {
+	color: #AAAAAA;
+	padding-right: 5px;
+	float: right;
+}
+
+p.usernameP {
+	width: auto;
+	height: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.siteheader2{
+    text-align: center;
+    border-radius: 0;
+    margin-bottom: 0;
+    color: white;
+    padding: 2em 1em;
+}
+div.siteheader {
+	text-align: center;
+	height: 60px;
+	padding-top: 15px;
+	padding-left: 10px;
+	opacity: 1;
+	color: white;
+    background-color: #041E42 !important;
+}
+
+nav.navbar-dark {
+	color: white;
+	vertical-align: middle;
+	width: 100%;
+	height: 30px;
+	margin: 0px;
+}
+
+div.test {
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+}
+
+div.content {
+	width:1200px;
+	height:auto;
+	position: absolute;
+	margin:auto;
+}
+
+div.conthandle {
+	height:100%;
+	width:1200px;
+	position: relative;
+	margin: 0 auto;
+}
+
+div.conthandleA	{
+	height:100%;
+	width:1200px;
+	position: relative;
+	margin: 0 auto;
+}
+
+div.contback {
+	height:100%;
+	width: 1200px;
+	position:absolute;
+	border-radius: 5px 5px;
+	margin: 0 auto;
+	background-color:#E4E4E4;
+	opacity: .15;
+}
+
+div.contbackA {
+	height:100%;
+	width: 1200px;
+	position:absolute;
+	border-radius: 0px 0px 5px 5px;
+	margin: 0 auto;
+	background-color:#E4E4E4;
+	opacity: .15;
+}
+
+div.chart {
+	border-radius: 5px 5px;
+	padding: 10px;
+	background-color:#E4E4E4;
+}
+
+table.lottable {
+	width: 85%;
+    	font-size: 2vw;
+	background-color: #E4E4E4;
+	border-collapse: separate;
+	table-layout: fixed;
+	border-spacing: 5px;
+	padding-bottom: 10px;
+	border-radius: 5px 5px;
+	margin: auto;
+	text-align: left;
+	vertical-align: top;
+	margin-top: 40px;
+	height: auto;
+}
+
+table.lottable2 {
+	width: 60%;
+	font-size: 2vw;
+	background-color: #E4E4E4;
+	border-collapse: separate;
+	table-layout: fixed;
+	border-spacing: 5px;
+	padding-bottom: 10px;
+	border-radius: 5px 5px;
+	margin: auto;
+	text-align: center;
+	vertical-align: top;
+	margin-top: 40px;
+	height: auto;
+}
+
+table.chartTable {
+	width: 85%;
+	margin: auto;
+	table-layout: fixed;
+	border-collapse: separate;
+	border-spacing: 10px 20px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+	border-radius: 5px 5px;
+	height: auto;
+}
+
+td.tablehead {
+	text-align: center;
+	padding: 0px;
+	color: white;
+	border-radius: 5px 5px;
+	background-color: #041E42;
+}
+
+td.leftcol {
+	margin:0px;
+	height: 30px;
+	padding-left: 15px;
+}
+
+td.rightcol {
+	margin: 0px;
+	text-align: center;
+	padding-left: 1px;
+	padding-right: 20px;
+}
+
+tr.dgrey {
+	background-color: #C4C4C4;
+}
+
+td.tdselector {
+	padding-top: 20px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+footer	{height:0px;}
+
+button.btn {
+	background-color:#041E42;
+	color: white;
+	font-size:2vw;
+}
+
+div.chartTitle	{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px;
+	background-color: #041E42;
+	display: table;
+	margin-bottom: 20px;
+	color: white;
+}
+
+div.chartTitle p {
+	display: table-cell;
+	font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0 0;
+	margin: 0 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+input.changeInput {
+	width:60px;
+	text-align: right;
+}
+
+div.chartContainer {
+	width: 1200px;
+	height: 1600px;
+	position: relative;
+	margin: 0 auto;
+}
+
+div.editContainer {
+	width: 1200px;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+div.tabsDiv {
+	width: 1200px;
+	height: 46px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.tabsback {
+	height: 100%;
+	width: 1200px;
+	position: absolute;
+	background-color: #E4E4E4;
+	border-radius: 5px 5px 0 0;
+	margin: 0 auto;
+	opacity: .15;
+}
+
+div.tabscontent	{
+	width: 1200px;
+	height: auto;
+	position: absolute;
+	/*border-bottom: solid 1px black;*/
+	margin: 0 auto;
+}
+
+.right {
+	text-align: right;
+}
+.center	{
+	text-align: center;
+}
+.top {
+	vertical-align: top;
+}
+
+.marginTop {
+	margin-top: 40px;
+}

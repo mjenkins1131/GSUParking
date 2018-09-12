@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="utf-8">
+		<title>GSU Parking</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="pageControl.js"></script>
+	</head>
+	
+	<body style="background-color: transparent;">
+		
+			<div style="background-color: #041E42; !important" class="siteheader2">
+				<h1 style = "font-size: 2.5vw">Georgia Southern Parking</h1>
+			</div>
+		
+		<nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="logLink" href="login.html">Admin Login</a>
+				</li>
+			</ul>
+		</nav>
+		
+			<div class="container">
+				<form>
+					<table class="lottable2">
+						<tr align ="center">
+							<td class="tablehead" colspan="1">
+							<h3>Admin Login</h3></td>
+						</tr>
+						<tr align="center">
+							<td>
+								<input type="text" name="usernameInput" id="usernameInput" placeholder="username" onfocus="fieldFocus(event);">
+							</td>
+						</tr>
+						<tr align="center">
+							<td>
+								<input style="text-align:center" type="password" name="passwordInput" id="passwordInput" placeholder="password" onfocus="fieldFocus(event);">
+							</td>
+						</tr>
+						<tr>
+							<td>
+                            <center>
+								<input type="submit" name="submitlogin" id="submitLogin" value="Login" onclick="loginRequest(event)">
+                                <input type="submit" value="Back" onclick="home(event)">
+                            </center>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+	</body>
+</html>

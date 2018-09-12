@@ -1,0 +1,87 @@
+var edit;
+var analytics;
+var create;
+var options;
+var divArray;
+
+var editButton;
+var analyticsButton;
+var createButton;
+var optionsButton;
+var tabArray;
+
+var changePassDiv;
+var addAdminDiv;
+
+var changePassExpand;
+var addAdminExpand;
+
+var openColor = "#E4E4E4";
+var closedColor = "inherit";
+
+function start()
+{
+	edit = document.getElementById("editDiv");
+	analytics = document.getElementById("analyticsDiv");
+	create = document.getElementById("createLotDiv");
+	options = document.getElementById("userOptionsDiv");
+
+	editButton = document.getElementById("editTabBtn");
+	analyticsButton = document.getElementById("analyticsTabBtn");
+	createButton = document.getElementById("createLotBtn");
+	optionsButton = document.getElementById("userTabBtn");
+
+	changePassDiv = document.getElementById("changePassDiv");
+	addAdminDiv = document.getElementById("addAdminDiv");
+
+	divArray = [analytics, edit, create, options];
+	tabArray = [analyticsButton, editButton, createButton, optionsButton];
+
+	divArray.forEach(function(item, index){
+		item.style.display = "none"
+	});
+
+	analytics.style.display = "block";
+	//analyticsButton.style.backgroundColor = openColor;
+
+	changePassDiv.style.visibility = "hidden";
+	addAdminDiv.style.visibility = "hidden";
+}
+
+function tabSwitch(event)
+{
+	var target = event.target;
+
+	tabArray.forEach(function(item, index){
+		if(target == item)
+		{
+			//item.style.backgroundColor = openColor;
+			divArray[index].style.display = "block";
+		}
+		else
+		{
+			//item.style.backgroundColor = closedColor;
+			divArray[index].style.display = "none"
+		}
+	})
+}
+
+function expandRequest(event)
+{
+	var target = event.target;
+	if(target.id == "changePassExpand")
+		expand(changePassDiv);
+	else if(target.id == "addAdminExpand")
+		expand(addAdminDiv);
+}
+
+function expand(element)
+{
+	var style = window.getComputedStyle(element);
+	if(style.visibility == "hidden")
+		element.style.visibility = "visible";
+	else
+		element.style.visibility = "hidden";
+}
+
+addEventListener("load", start, false);

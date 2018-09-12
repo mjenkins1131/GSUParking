@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>GSU Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="getLotData.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="admindiv" >
+				<a href="adminParking.html">Admin Site</a>
+			</div>
+			<div class="siteheader">
+				<h1>Georgia Southern Parking</h1>
+			</div>
+		</header>
+
+		<div class="navbar">
+			<a class="linkright">any links needed?</a>
+		</div>
+		
+		<div class="conthandle">
+			<div class="contback"></div>
+
+			<div class="content">
+				<table class="lottable">
+					<tr>
+						<td class="tablehead" colspan="2"><h3>Parking Lot Count</h3></td>
+					</tr>
+					<tr>
+						<td class="tdselector">
+							<select id="lotselector" onchange="LotSelected();">
+								<option id="defaultlot" value="0" selected disable selected hidden>Choose Lot</option>
+								<option value="11">Lot 11</option>
+								<option value="12">Lot 12</option>
+								<option value="13">Lot 13</option>
+								<option value="21">Lot 21</option>
+								<option value="30">Lot 30</option>
+								<option value="31">Lot 31</option>
+								<option value="32">Lot 32</option>
+								<option value="33">Lot 33</option>
+								<option value="41">Lot 41</option>
+								<option value="42">Lot 42</option>
+							</select>
+						</td>
+					</tr>
+					<tr class="dgrey">
+						<td class="leftcol">Lot:</td>
+						<td id="lotnumber"class="rightcol">   --</td>
+					</tr>
+					<tr class="dgrey">
+						<td class="leftcol">Available Spots:</td>
+						<td id="avaspots" class="rightcol">--</td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+	</body>
+</html>

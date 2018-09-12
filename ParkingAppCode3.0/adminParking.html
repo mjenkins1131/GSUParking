@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html id="html">
+	<head>
+		<meta charset="utf-8">
+		<title>GSU Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script type = "text/javascript" src="pageControl.js"></script>
+		<script type = "text/javascript" src="graphLoader.js"></script>
+	</head>
+
+	<body id="body">
+		<header>
+			<div class="admindiv" >
+				<a class="logLink" id="logoutLink" onclick="logoutRequest()">Logout</a>
+			</div>
+			<div class="siteheader">
+				<h1>Georgia Southern Parking</h1>
+			</div>
+		</header>
+
+		<div class="navbar">
+		</div>
+		
+		<div id="contentHandle" class="conthandleA">
+			<div id="contentBack" class="contback"></div>
+			<div id="content" class="content">
+				<form>
+					<table class="lottable">
+						<tr>
+							<td class="tablehead" colspan="2"><h3>Parking Lot Count</h3></td>
+						</tr>
+						<tr>
+							<td class="tdselector">
+								<select id="lotSelector" onchange="selectRequest();">
+									<option id="defaultlot" value="0" selected disable selected hidden>Choose Lot</option>
+									<option value="11">Lot 11</option>
+									<option value="12">Lot 12</option>
+									<option value="13">Lot 13</option>
+									<option value="21">Lot 21</option>
+									<option value="30">Lot 30</option>
+									<option value="31">Lot 31</option>
+									<option value="32">Lot 32</option>
+									<option value="33">Lot 33</option>
+									<option value="41">Lot 41</option>
+									<option value="42">Lot 42</option>
+								</select>
+							</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Lot:</td>
+							<td id="lotSelectedText"class="rightcol">   --</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Capacity:</td>
+							<td id="capacityText" class="rightcol">--</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Available Spots:</td>
+							<td id="openSpotsText" class="rightcol">--</td>
+						</tr>
+						<tr>
+							<td class="tdselector">Change Capacity:</td>
+							<td><input id="changeCapacityInput" class="changeInput" type="text"></td>
+						</tr>
+						<tr>
+							<td class="tdselector">Change Available Spots:</td>
+							<td><input id="changeAvailabilityInput" class="changeInput" type="text"></td>
+						</tr>
+						<tr>
+							<td class="tdselector"><input id="submitChanges" type="submit" value="Submit" onclick="changeRequest(event);"></td>
+						</tr>
+					</table>
+				</form>
+
+				<div class="chartContainer">
+					<table class="chartTable">
+						<tr>
+							<td class="tablehead" colspan="2"><h2>Analytics</h2></td>
+						</tr>
+						<tr>
+							<td><div class="chart"><canvas id="openSpotsChart"></canvas></div></td>
+							<td><div class="chart"><canvas id="capacityChart"></canvas></div></td></td>
+						</tr>
+						
+					</table>
+				</div>
+
+				<div class="chart">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+

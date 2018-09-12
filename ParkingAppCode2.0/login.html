@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<form>
+	<table class="lottable">
+		<tr>
+			<td class="tablehead" colspan="2"><h3>Admin Login</h3></td>
+		</tr>
+		<tr><td class="tdselector"><input type="text" name="usernameInput" id="usernameInput" placeholder="username" onfocus="fieldFocus(event);"></td></tr>
+		<tr><td class="leftcol"><input type="text" name="passwordInput" id="passwordInput" placeholder="password" onfocus="fieldFocus(event);"></td></tr>
+		<tr><td class="tdselector"><input type="submit" name="submitlogin" id="submitLogin" value="Login" onclick="loginRequest(event)"></td>
+			<td><input type="submit" id="loginCancel" value="Cancel" onclick="loadUser(event)"><td>
+		</tr>
+	</table>
+</form>

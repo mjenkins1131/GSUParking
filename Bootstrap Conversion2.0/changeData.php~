@@ -1,0 +1,10 @@
+<?php
+	$servername = 'testinstance1.ccoejqdeod0j.us-east-1.rds.amazonaws.com';
+	$username = 'testuser';
+	$password = 'password123';
+	$database = 'testdatabase';
+	$port = '3306';
+
+	$lotSelected = $_POST['lotSelected'];
+	$newAvailability = $_POST['newAvailability'];
+	

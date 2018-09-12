@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html id="html">
+	<head>
+		<meta charset="utf-8">
+		<title>GSU Parking</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script type = "text/javascript" src="pageControl.js"></script>
+		<script type = "text/javascript" src="graphLoader.js"></script>
+		<script type = "text/javascript" src="adminTabControl.js"></script>
+		<script type = "text/javascript" src="adminVerification.js"></script>
+	</head>
+
+	<body id="body">
+		<header>
+			<div class="loginDiv" id="loginDiv" >
+				<p id="usernameP" class="usernameP"><a class="logLink" id="logoutLink" onclick="logoutRequest()">Logout</a></p>
+				
+			</div>
+			<div class="siteheader">
+				<h1>Georgia Southern Parking</h1>
+			</div>
+		</header>
+
+		<div class="navbar">
+		</div>
+
+		<div class="tabsDiv">
+			<div class="tabsback"></div>
+			<div class="tabscontent">
+				<button id="analyticsTabBtn" class="tab" onclick="tabSwitch(event)">Analytics</button>
+				<button id="editTabBtn" class="tab" onclick="tabSwitch(event)">Edit Lot</button>
+				<button id="createLotBtn" class="tab" onclick="tabSwitch(event)">Create Lot</button>
+				<button id="userTabBtn" class="tabRight" onclick="tabSwitch(event)">User Options</button>
+			</div>
+		</div>
+
+		<div id="editDiv" class="editContainer">
+			<div class="contbackA"></div>
+			<div class="content">
+				<form>
+					<table class="lottable">
+						<tr>
+							<td class="tablehead" colspan="2"><h3>Edit Lot</h3></td>
+						</tr>
+						<tr>
+							<td class="tdselector">
+								<select id="lotSelector" onchange="selectRequest();">
+									<option id="defaultlot" value="0" selected disable selected hidden>Choose Lot</option>
+									<option value="11">Lot 11</option>
+									<option value="12">Lot 12</option>
+									<option value="13">Lot 13</option>
+									<option value="21">Lot 21</option>
+									<option value="30">Lot 30</option>
+									<option value="31">Lot 31</option>
+									<option value="32">Lot 32</option>
+									<option value="33">Lot 33</option>
+									<option value="41">Lot 41</option>
+									<option value="42">Lot 42</option>
+								</select>
+							</td>
+							<td class="right">
+								<select id="campSelector">
+									<option value="0" selected disable seleced hidden>Choose Campus</option>
+									<option value="Armstrong">Armstrong</option>
+									<option value="Main">GSU Statesboro Campus</option>
+									<option value="other">other place campus</option>
+								</select>
+							</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Lot:</td>
+							<td id="lotSelectedText"class="rightcol">   --</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Capacity:</td>
+							<td id="capacityText" class="rightcol">--</td>
+						</tr>
+						<tr class="dgrey">
+							<td class="leftcol">Available Spots:</td>
+							<td id="openSpotsText" class="rightcol">--</td>
+						</tr>
+						<tr>
+							<td class="tdselector">Change Capacity:</td>
+							<td><input id="changeCapacityInput" class="changeInput" type="text"></td>
+						</tr>
+						<tr>
+							<td class="tdselector">Change Available Spots:</td>
+							<td><input id="changeAvailabilityInput" class="changeInput" type="text"></td>
+						</tr>
+						<tr>
+							<td class="tdselector"><input id="submitChanges" type="submit" value="Submit" onclick="changeRequest(event);"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+
+		<div id="analyticsDiv" class="chartContainer">
+			<div class="contbackA"></div>
+			<div class="content">
+				<table class="chartTable">
+					<tr>
+						<td><div class="chart"><div class="chartTitle"><p>OpenSpots</p></div><canvas id="openSpotsChart"></canvas></div></td>
+						<td><div class="chart"><div class="chartTitle"><p>Capacity</p></div><canvas id="capacityChart"></canvas></div></td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="createLotDiv" class="editContainer">
+			<div class="contbackA"></div>
+			<div class="content">
+				<table class="lottable">
+					<tr>
+						<td class="tablehead" colspan="2"><h3>Create Lot</h3></td>
+					</tr>
+					<tr>
+						<td class="tdselector">
+							<select id="campSelector">
+								<option value="0" selected disable seleced hidden>Choose Campus</option>
+								<option value="Armstrong">Armstrong</option>
+								<option value="Main">GSU Statesboro Campus</option>
+								<option value="other">other place campus</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdselector">Lot Number:</td>
+						<td><input id="" class="changeInput" type="text"></td>
+					</tr>
+					<tr>
+						<td class="tdselector">Capacity:</td>
+						<td><input id="changeAvailabilityInput" class="changeInput" type="text"></td>
+					</tr>
+					<tr>
+						<td class="tdselector"><button>Submit</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div id="userOptionsDiv" class="editContainer">
+			<div class="contbackA"></div>
+			<div class="content">
+				<table class="lottable">
+					<tr>
+						<td class="tablehead" colspan="2"><h3>User Options</h3></td>
+					</tr>
+					<tr>
+						<td class="top center"><button id="changePassExpand" onclick="expandRequest(event)">Change Password</button></td>
+						<td><div id="changePassDiv" class="center">
+							<input type="text" id="currentPass" placeholder="Current Password">
+							<input type="text" id="newPass" placeholder="New Password">
+							<input type="text" id="newPass2" placeholder="Repeat New Password"><br>
+							<button id="changePassRequest">Submit</button>
+						</div></td>
+					</tr>
+					<tr>
+						<td class="top center"><button id="addAdminExpand" onclick="expandRequest(event)">Add Admin</button></td>
+						<td><div id="addAdminDiv" class="center">
+							<input type="text" id="AAPassword" placeholder="password">
+							<input type="text" id="newAdminUsername" placeholder="new username">
+							<input type="text" id="AAnewPass" placeholder="new password">
+							<input type="text" id="AAnewPass2" placeholder="repeat new password"><br>
+							<button id="addAdminRequest">Submit</button>
+						</div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+

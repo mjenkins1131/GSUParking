@@ -1,0 +1,35 @@
+{
+  "SX127x_conf":
+  {
+    "freq": 902300000,
+    "spread_factor": 9,
+    "pin_nss": 6,
+    "pin_dio0": 7,
+    "pin_rst": 0
+  },
+  "gateway_conf":
+  {
+    "ref_latitude": 0.0,
+    "ref_longitude": 0.0,
+    "ref_altitude": 10,
+
+    "name": "SEParkingGateway",
+    "email": "contact@whatever.com",
+    "desc": "Gateway used for GS SE Sensor Project",
+
+    "servers":
+    [
+      {
+        "address": "router.us.thethings.network",
+        "port": 1700,
+        "enabled": true
+      },
+      {
+        "address": "router.eu.thethings.network",
+        "port": 1700,
+        "enabled": false
+      }
+    ]
+  }
+}
+
