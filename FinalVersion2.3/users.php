@@ -135,7 +135,8 @@
                 $sql->fetch();
 		
 		
-		if($password == $replypass){
+		if(password_verify($password, $replypass))
+		{
 			$ar = array('username'=>$username,'admin'=>'true');
                    	echo(json_encode($ar));
 		}
