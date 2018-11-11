@@ -85,37 +85,46 @@
 	{
 		try
         {
-            if($sql = $conn->prepare("SELECT * FROM User WHERE Username=?"))
+            if($sql = $conn->prepare("SELECT * FROM Users WHERE Email_Address=?"))
             {
                 $sql->bind_param("s", $newuser);
-                $sql->bind_result($replyuser, $replypass);
-                $sql->execute();
+				$sql->execute();
+                $sql->bind_result($UserId, $replyuser, $replypass, $status);
                 $sql->fetch();
+				
                 if($replyuser == null)
                 {
                     $sql->close();
-                    if($sql = $conn->prepare("SELECT * FROM User WHERE Username=?"))
+					
+                    if($sql = $conn->prepare("SELECT * FROM Users WHERE Email_Address=?"))
                     {
                         $sql->bind_param("s", $username);
-                        $sql->bind_result($replyuser, $replypass);
-                        $sql->execute();
+						$sql->execute();
+                        $sql->bind_result($UserId, $replyuser, $replypass, $status);
                         $sql->fetch();
+						
                         if(password_verify($password, $replypass))
                         {
                             $sql->close();
-                            $sql = $conn->prepare("INSERT INTO User VALUES (?, ?)");
+                            $sql = $conn->prepare("INSERT INTO Users VALUES (?, ?, ?, ?)");
                         	$passwordhash = password_hash($newpass, PASSWORD_BCRYPT);
-                            $sql->bind_param("ss", $newuser, $passwordhash);
+							$adminAuth = 1;
+							$UserID = getLastUserID($conn) + 1;
+                            $sql->bind_param("issi", $UserID, $newuser, $passwordhash, $adminAuth);
                             $sql->execute();
                             echo("Success");
                         }
                         else
                             echo("Incorrect admin information!");
                     }
+					else
+						echo("SQL connection 2 error");
                 }
                 else
                     echo("User already exists!");
             }
+			else
+				echo("SQL connection 1 error");
         }
         catch(Exception $e)
         {
@@ -151,5 +160,18 @@
         {
             echo("denied");
         }
+	}
+	
+	function getLastUserID($conn)
+	{
+		$sql = "SELECT * FROM Users ORDER BY User_Id DESC";
+		$rs = $conn->query($sql);
+		if($rs)
+		{
+			$row = $rs->fetch_assoc();
+			return $row["User_Id"];
+		}
+		else
+			echo("get user lot id query failed");
 	}
 ?>
