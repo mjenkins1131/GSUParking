@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<title>GSU Parking</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+		
+		<!--Google maps-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNRxCHNiPzOZWha4zkx0_lZ2Ffci0Pisw&callback"></script>
+		<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="navbar2.css">
+
+		<script type="text/javascript" src="pageControl.js"></script>
+		<script type="text/javascript" src="userVerification.js"></script>
+		<script type = "text/javascript" src = "graphLoader.js"></script>
+		<script type = "text/javascript" src = "navbar2.js"></script>
+	</head>
+	
+	<body style="background-color: transparent;">
+		
+			<div style="background-color: #041E42; !important" class="siteheader2">
+				<h1 style = "font-size: 2.5vw">Georgia Southern Parking</h1>
+			</div>
+		
+		<ul class="navS" id="navS">
+        <li id="Home"><a href="index.html">Home</a></li>
+        <li id="Locations"><a href="locations.html">Locations</a></li>
+        <li id="Trends"><a href="loadTrends.html">Trends</a></li>
+            </ul>
+
+        <div class="container">
+				<table class="lottable table-striped">
+					<tr>
+						<td class="tablehead" colspan="2">
+						<h3>Parking Lot Count</h3>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdselector">
+					
+							<select id="campSelector" onchange="campusSelectRequest()">
+								
+							</select>
+							
+						</td>
+						<td class="right">
+							<select id="lotSelector" onchange="lotSelectRequest()">
+
+							</select>
+						</td>
+						
+					</tr>
+					<tr class="dgrey">
+						<td class="leftcol">Lot:</td>
+						<td id="lotSelectedText" class="rightcol">--</td>
+					</tr>
+					<tr class="dgrey">
+						<td class="leftcol">Capacity:</td>
+						<td id="capacityText" class="rightcol">--</td>
+					</tr>
+					<tr class="dgrey">
+						<td class="leftcol">Available Spots:</td>
+						<td id="openSpotsText" class="rightcol">--</td>
+					</tr>
+				</table>
+				
+        </div>
+
+	<div id = "map"> 
+
+	</div>
+<div id="analyticsDiv" class="container">
+	<div class = "row">
+		<table class = "chartTable">
+			<tr>
+					<td>	
+					<div class = "col-sm-1">
+						<select id="lotSelect" onchange="analyticsDaySelect()">
+							<option id = "lotSelected" selected disable selected>&nbsp;</option>
+							</select>
+					</div>
+
+				</td>
+				<td>	
+					<div class = "col-sm-1">
+						<select id="daySelect">
+
+							</select>
+					</div>
+
+				</td>
+
+			</tr>
+			<tr>
+						<td colspan="3">
+							<div id = "parkedDay" class="chart">
+								<div class="chartTitle">
+									<p>Average Trends for Today</p>
+								</div>
+								<canvas id="averageParkedDay"></canvas>
+							</div>
+						</td>
+			</tr>
+
+		</table>
+	</div>
+	</div>
+	</body>
+</html>

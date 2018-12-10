@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/homePage.css">
+
+    <title>Georgia Southern Parking Homepage</title>
+
+  </head>
+  <body>
+<!--Content of the page-->
+    
+    <nav class="navbar navbar-expand-lg" style="background-color: #041e42;" "fixed-top bg-dark">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <span class="navbar-brand" href="#"><img src="images/logo3.png" width="250" height="40"></span>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <button type="button" class="btn btn-success" onclick="loadLogin()">Login</button>
+        </div>
+    </nav>
+    
+    <!--<header>-->
+    <div class="jumbotron"> 
+    </div>        
+                
+        <!--</header>-->
+    <h1>Parking &amp; Transportation</h1>
+        <!--Row of columns-->
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Locations</h3>
+                <a href = "locations.html"><img src="images/parkingMap.jpg" width="300" height="200"></a>
+                <p>To view parking lots and availability on Georgia Southern's campus please click <a href="locations.html">here</a>.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Trends</h3>
+               <a href = "loadTrends.html"> <img src="images/graph.jpg" width="300" height="200"></a>
+                <p>To view peak times in parking lots click <a href="loadTrends.html">here</a>.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Rules and Regulations</h3>
+                <a href="https://auxiliary.georgiasouthern.edu/parking/general-parking-regulations/"><img src="images/parkingTicket.jpg" width="300" height="200"></a>
+                <p>If you plan on parking on campus please view Georgia Southern's parking rules and regulations click <a href="https://auxiliary.georgiasouthern.edu/parking/general-parking-regulations/">here</a>.</p>
+            </div>    
+        </div>
+    </div>
+	<br/><br/><br/>
+    <video controls style = "margin-bottom: 30px;">
+         <source src = "videos/enterVideo.mp4" type = "video/mp4">
+         This browser doesn't support video tag.
+    </video>
+	 <video controls style = "margin-bottom: 30px;">
+         <source src = "videos/exitVideo.mp4" type = "video/mp4">
+         This browser doesn't support video tag.
+    </video>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+function loadLogin(){
+window.location.href = "login.html";
+}
+function loadLocations(){
+window.location.href = "locations.html";
+}
+function loadTrends(){
+window.location.href = "loadTrends.html";
+}
+</script>  
+</body>
+</html>

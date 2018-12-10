@@ -1,0 +1,45 @@
+.navbar #nav > .active > a {
+    color: white;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+    background-color: rgb(80,80,80);
+}
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 14px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: darkgoldenrod;
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    background-color: darkgoldenrod;
+    text-decoration: none;
+    color: white;
+}
+
+
+#btnId
+{
+	display: block;
+    padding: 14px 14px;
+    float: right;
+}
+

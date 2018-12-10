@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+body{
+/*background-color: #101D38;*/
+background:#041e42 url(gsbg.png) no-repeat fixed top center;
+background-size:cover;
+}
+.container-login{
+background-color: #D7D2C7;
+margin: 50px auto 0 auto;
+border-radius: 11px;
+width: 320px;
+height: 250px;
+padding: 0px;
+}
+#title{
+text-align: center;
+background-color:#101D38;
+border: 1px solid #101D38;
+border-radius: 10px 10px 0 0;
+color: white;
+padding: 10px;
+}
+.info{
+margin: auto;
+padding: 3px 0;
+margin-top: 15px;
+width: 240px;
+border-radius: 4px;
+
+}
+img{
+width: 2cm;
+height: 2cm;
+}
+input[type=text] {
+    margin: 0;
+    background-color: white;
+    border: 1px solid white;
+    padding: 6px 0px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+input[type=password] {
+    margin: 0;
+    margin-left: 5px;
+    background-color: white;
+    border: 1px solid white;
+    padding: 6px 0px;
+    border-radius: 3px;
+}
+.clear{
+clear: both;
+}
+.login{
+text-align: center;
+margin-top: 15px;
+}
+input[type=submit] {
+    padding: 4px 20px;
+    background: #373E4A;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.fcontainer{
+background-color: #D7D2C7;
+margin: 50px auto 0 auto;
+border-radius: 11px;
+width: 320px;
+height: 200px;
+padding: 0px;
+}
+.email{
+text-align: center;
+margin-top: 15px;
+}
+input[type = email]{
+padding: 4px 20px;
+border-radius: 4px;
+}
+.sendPass{
+text-align: center;
+margin-top: 10px;
+}

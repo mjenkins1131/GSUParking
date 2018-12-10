@@ -1,0 +1,51 @@
+.navbar{ background:#05054A;}
+
+.navbar-collapse{ justify-content: flex-end;}
+
+.col-md-4:hover
+{
+    background-color: rgb(180,180,180);
+}
+h1
+{
+    text-align: center;
+    color: white;
+}
+
+.jumbotron {
+min-height: 200px;
+background-image: url("../images/gsu.jpg");
+background-size: cover;
+background-position: 0% 83%;
+}
+
+body
+{
+    background-color: #041e42;
+}
+
+.col-md-4
+{
+    border-right: 10px solid #041e42;
+    background-color: rgb(220,220,220);
+}
+
+
+video
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.container
+{
+    text-align: center;
+}
+p
+{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 5px;
+}
